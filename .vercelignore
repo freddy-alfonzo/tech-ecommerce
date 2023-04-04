@@ -1,4 +1,4 @@
-/ecommerce
-/ecommerce/sanity.cli.ts
+./ecommerce/sanity.cli.ts
 ./ecommerce/sanity.config.ts
-./ecommerce
+/ecommerce/sanity.cli.ts
+/ecommerce/sanity.config.ts
