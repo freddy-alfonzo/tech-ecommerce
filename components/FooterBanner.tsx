@@ -1,5 +1,4 @@
 import { BannerData } from "@/models/models";
-import Link from "next/link";
 import { urlFor } from "@/lib/client";
 
 interface FooterBannerProps {
@@ -13,8 +12,6 @@ const FooterBanner = ({
     saleTime,
     smallText,
     midText,
-    product,
-    buttonText,
     image,
     desc,
   },
@@ -23,7 +20,7 @@ const FooterBanner = ({
     <div className="footer-banner-container">
       <div className="banner-desc">
         <div className="left">
-          <p>{discount}</p>
+          <p className="discount">{discount}</p>
           <h3>{largeText1}</h3>
           <h3>{largeText2}</h3>
           <p>{saleTime}</p>
@@ -31,10 +28,7 @@ const FooterBanner = ({
         <div className="right">
           <p>{smallText}</p>
           <h3>{midText}</h3>
-          <p>{desc}</p>
-          <Link href={`/product/${product}`}>
-            <button type="button">{buttonText}</button>
-          </Link>
+          <p><b>{desc}</b></p>
         </div>
         <img src={urlFor(image) as string} alt="product-img" className="footer-banner-image"/>
       </div>
